@@ -1,0 +1,24 @@
+﻿@using Microsoft.Extensions.Options
+@*@inject IOptions<StripeSettings> Stripe*@
+
+<form action="/Home/Charge" method="POST">
+    <article>
+        <label>Amount: $5.00</label>
+    </article>
+    <script src="//checkout.stripe.com/v2/checkout.js"
+            class="stripe-button"
+            data-key="pk_test_51Ho3nzKamwhJTnL2zTCCpUiatAm3WIsNONbpUaAw6qQ4Y9qsGWm1gOKlXPLb9lmVdRys7VkWuNTokFpdaxHPzOxE00zPOKOF69"
+            data-locale="auto"
+            data-description="Sample Charge"
+            data-amount="5000">
+    </script>
+    <script>
+        var response = fetch('/Home/TrannsferPayment').then(function(response) {
+  return response.json();
+}).then(function(responseJson) {
+    var clientSecret = responseJson.client_secret;
+    debugger;
+    stripe.confirmCardPayment(clientSecret) //with the client secret. Call
+});
+    </script>
+</form>

@@ -1,0 +1,17 @@
+﻿@using Microsoft.Extensions.Options
+@*@inject IOptions<StripeSettings> Stripe*@
+
+<form action="/Home/Charge" method="POST">
+    <article>
+        <label>Amount: $5.00</label>
+    </article>
+    <script src="//checkout.stripe.com/v2/checkout.js"
+                        class="stripe-button"
+                        data-key="pk_test_51HqZBDLnFgPc5G9B1FctEu3hQGXMR4PgtV08s6hG8Q2oeEEDgUnrFPh9wVXiPT47CwHLzDRK6bJMj98RxNuSRFJi0062kk4SYX"
+                        data-locale="auto"
+                        data-name="Save your Credit card info"
+                        data-panel-label="Save"
+                        data-description="Save Credit Card info"
+                        data-label="Save your Credit card info">
+    </script>
+</form>
