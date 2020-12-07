@@ -27,7 +27,7 @@ namespace StripeWeb.Controllers
         }
         public string CreateCustomer()
         {
-            StripeConfiguration.ApiKey = "sk_test_51HqZBDLnFgPc5G9BeuyG5lXc32mkG8Hijz01tGKSD6c5ChKpWHSARtJ49yNv75GXY3AbAINw08N8kA1VkvwZtONW00o0QdHxLp";
+            StripeConfiguration.ApiKey = "sk_test_xx"; //Stripe secret key
             var optionsToken = new TokenCreateOptions()
             {
                 Card = new TokenCardOptions()
@@ -55,7 +55,7 @@ namespace StripeWeb.Controllers
         //get payment from credit card
         public bool Charge(string customerId)
         {
-            StripeConfiguration.ApiKey = "sk_test_51HqZBDLnFgPc5G9BeuyG5lXc32mkG8Hijz01tGKSD6c5ChKpWHSARtJ49yNv75GXY3AbAINw08N8kA1VkvwZtONW00o0QdHxLp";
+            StripeConfiguration.ApiKey = "sk_test_xx"; //Stripe secret key
           
             var charges = new ChargeService();
 
@@ -79,7 +79,7 @@ namespace StripeWeb.Controllers
     
         public string CreateConnectedExpressAccount()
         {
-            StripeConfiguration.ApiKey = "sk_test_51HqZBDLnFgPc5G9BeuyG5lXc32mkG8Hijz01tGKSD6c5ChKpWHSARtJ49yNv75GXY3AbAINw08N8kA1VkvwZtONW00o0QdHxLp";
+            StripeConfiguration.ApiKey = "sk_test_xx"; //Stripe secret key
 
              var options = new AccountCreateOptions
             {
@@ -105,7 +105,7 @@ namespace StripeWeb.Controllers
 
         public string CreateConnectedCustomAccount()
         {
-            StripeConfiguration.ApiKey = "sk_test_51HqZBDLnFgPc5G9BeuyG5lXc32mkG8Hijz01tGKSD6c5ChKpWHSARtJ49yNv75GXY3AbAINw08N8kA1VkvwZtONW00o0QdHxLp";
+            StripeConfiguration.ApiKey = "sk_test_xx"; //Stripe secret key
 
             var options = new AccountCreateOptions
             {
@@ -144,7 +144,7 @@ namespace StripeWeb.Controllers
         }
         public string UpdateConnectedCustomAccount()
         {
-            StripeConfiguration.ApiKey = "sk_test_51HqZBDLnFgPc5G9BeuyG5lXc32mkG8Hijz01tGKSD6c5ChKpWHSARtJ49yNv75GXY3AbAINw08N8kA1VkvwZtONW00o0QdHxLp";
+            StripeConfiguration.ApiKey = "sk_test_xx"; //Stripe secret key
 
             var options = new AccountUpdateOptions
             {
@@ -219,7 +219,7 @@ namespace StripeWeb.Controllers
         //for stripe account to stripe account payment
         public IActionResult TrannsferPayment(string connectedStripeAccountId)
         {
-            StripeConfiguration.ApiKey = "sk_test_51HqZBDLnFgPc5G9BeuyG5lXc32mkG8Hijz01tGKSD6c5ChKpWHSARtJ49yNv75GXY3AbAINw08N8kA1VkvwZtONW00o0QdHxLp";
+            StripeConfiguration.ApiKey = "sk_test_xx"; //Stripe secret key
             var options = new TransferCreateOptions
             {
                 Amount = 10,
